@@ -4,16 +4,30 @@
       <h1>happier<span>work</span></h1>
     </div>
     <h2>Login</h2>
-    <form>
+    <form [formGroup]="loginForm">
       <div class="form-group">
         <label for="email">Email ID</label>
-        <input type="email" id="email" placeholder="Enter your email ID" />
+        <input type="email" id="email" placeholder="Enter your email ID" formControlName="email" />
+        @if(getValidationErrors('email')) {
+          @if(getRequiredError('email')) {
+            <span class="error-text">
+              Email is required.
+            </span>
+          }
+        }
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter your password" />
+        <input type="password" id="password" placeholder="Enter your password" formControlName="password" />
+        @if(getValidationErrors('password')) {
+          @if(getRequiredError('password')) {
+            <span class="error-text">
+              Password is required.
+            </span>
+          }
+        }
       </div>
-      <button type="submit" class="btn-login">Login</button>
+      <button type="submit" class="btn-login" (click)="login()">Login</button>
     </form>
   </div>
 </div>

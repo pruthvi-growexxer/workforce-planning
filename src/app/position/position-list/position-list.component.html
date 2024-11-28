@@ -1,1 +1,97 @@
-<p>position-list works!</p>
+<div class="container">
+  <app-sidebar></app-sidebar>
+
+  <div class="body">
+    <app-header></app-header>
+    <div class="main-content">
+
+      <div class="page-container">
+        <!-- Header -->
+        <div class="page-header">
+          <div class="breadcrumb">
+            <a class="back-button" href="/project/list">←</a>
+            <h2>Ahmadabad Growth</h2>
+          </div>
+          <button class="create-position-button">+ Create Position</button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content">
+          <!-- Left Section: Table -->
+          <div class="table-section">
+            <div class="filter-container">
+              <!-- Search Box -->
+              <div class="search-box">
+                <mat-form-field appearance="outline" floatLabel="always">
+                  <input matInput placeholder="Enter a name" [(ngModel)]="searchValue" (input)="applyFilters()" />
+                  <button mat-icon-button matSuffix aria-label="Clear" *ngIf="searchValue" (click)="clearSearch()">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </mat-form-field>
+              </div>
+
+              <!-- Designation Dropdown -->
+              <div class="designation-dropdown">
+                <mat-form-field appearance="outline">
+                  <mat-select [(ngModel)]="selectedDesignation" name="designation" disableRipple>
+                    <mat-option [value]="">All</mat-option>
+                    @for (designation of designations; track designation) {
+                      <mat-option [value]="designation">{{designation}}</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <ag-grid-angular
+              style="width: 100%; height: 85%;"
+              [columnDefs]="columnDefs"
+              [defaultColDef]="defaultColDef"
+              [pagination]="true"
+              [paginationPageSize]="paginationPageSize"
+              [cacheBlockSize]="cacheBlockSize"
+              [rowData]="rowData"
+              [class]="themeClass"
+              (gridReady)="onGridReady($event)"
+            />
+          </div>
+
+          <!-- Right Section: Budget Chart -->
+          <div class="budget-section">
+            <div class="budget-header">
+              <h3>Budget</h3>
+              <button class="edit-button">Edit</button>
+            </div>
+
+            <div class="chart-container">
+              <canvas baseChart [data]="doughnutChartData" [type]="'doughnut'" [options]="doughnutChartOptions"
+                *ngIf="isBrowser"></canvas>
+            </div>
+            <div class="chart-legend">
+              <div *ngFor="let label of doughnutChartLabels; let i = index" class="legend-item">
+                <div class="legend-color" [style.background-color]="backgroundColor[i]"></div>
+                <span>{{ label }}</span>
+                <span class="legend-percentage">{{ doughnutChartData.datasets[0].data[i] }} %</span>
+              </div>
+            </div>
+            <hr class="separator">
+            <div class="budget-summary">
+              <span class="total_budget">
+                <p>Total budget: </p>
+                <p> ₹2 Cr</p>
+              </span>
+              <span>
+                <p>Used: </p>
+                <p> ₹1.5 Cr</p>
+              </span>
+              <span>
+                <p>Left: </p>
+                <p> ₹50 L</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

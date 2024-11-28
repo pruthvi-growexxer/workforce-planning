@@ -7,7 +7,6 @@ const routes: Routes = [
   { path: '', redirectTo: 'list', pathMatch: 'full' }, // Default route for Position
   { path: 'list', component: PositionListComponent }, // List positions in a project
   { path: 'create', component: CreatePositionComponent }, // Create a new position
-  { path: ':id/edit', component: CreatePositionComponent }, // Edit position by ID
 ];
 
 @NgModule({

@@ -1,7 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* Core Data Grid CSS */
+@import url('ag-grid-community/styles/ag-grid.css');
+/* Quartz Theme Specific CSS */
+@import url('ag-grid-community/styles/ag-theme-alpine.css');
+
+html,
+body {
+  height: 100%;
+}
 
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0px;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.mat-display-medium,
+.mat-typography,
+.mat-typography .mat-display-medium,
+.mat-typography h1,
+.mat-typography h2,
+.mat-typography h3,
+.mat-typography h4,
+.mat-typography h5,
+.mat-typography h6 {
+  font-family: "Poppins" !important;
 }
