@@ -9,7 +9,7 @@
         <!-- Header -->
         <div class="page-header">
           <div class="breadcrumb">
-            <a class="back-button" href="/project/list">←</a>
+            <a class="back-button" [routerLink]="['/project/list']" routerLinkActive="active">←</a>
             <h2>Ahmadabad Growth</h2>
           </div>
           <button class="create-position-button">+ Create Position</button>
@@ -33,12 +33,12 @@
               <!-- Designation Dropdown -->
               <div class="designation-dropdown">
                 <mat-form-field appearance="outline">
-                  <mat-select [(ngModel)]="selectedDesignation" name="designation" disableRipple>
-                    <mat-option [value]="">All</mat-option>
+                  <select matNativeControl [(ngModel)]="selectedDesignation" name="designation" (change)="filterByDesignation()">
+                    <option [value]="">All</option>
                     @for (designation of designations; track designation) {
-                      <mat-option [value]="designation">{{designation}}</mat-option>
+                      <option [value]="designation">{{designation}}</option>
                     }
-                  </mat-select>
+                  </select>
                 </mat-form-field>
               </div>
             </div>
@@ -50,7 +50,7 @@
               [pagination]="true"
               [paginationPageSize]="paginationPageSize"
               [cacheBlockSize]="cacheBlockSize"
-              [rowData]="rowData"
+              [rowData]="filteredData"
               [class]="themeClass"
               (gridReady)="onGridReady($event)"
             />

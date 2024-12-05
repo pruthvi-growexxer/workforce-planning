@@ -1,6 +1,4 @@
-import { Component, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { Chart, ChartConfiguration } from 'chart.js';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -12,14 +10,6 @@ export interface EmployeePosition {
   updatedBy: string;
   lastUpdated: string;
   action: string;
-}
-
-// Row Data Interface
-interface IRow {
-  make: string;
-  model: string;
-  price: number;
-  electric: boolean;
 }
 
 @Component({
@@ -83,7 +73,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'UI Designer',
@@ -92,7 +82,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Architect',
@@ -101,7 +91,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Chief Legal Officer',
@@ -110,7 +100,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Vice President',
@@ -119,7 +109,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'HR',
@@ -128,7 +118,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'UI Designer',
@@ -137,7 +127,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Architect',
@@ -146,7 +136,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Chief Legal Officer',
@@ -155,7 +145,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Vice President',
@@ -164,7 +154,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'HR',
@@ -173,7 +163,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'UI Designer',
@@ -182,7 +172,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Architect',
@@ -191,7 +181,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Chief Legal Officer',
@@ -200,7 +190,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Vice President',
@@ -209,7 +199,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'HR',
@@ -218,7 +208,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'UI Designer',
@@ -227,7 +217,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Architect',
@@ -236,7 +226,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Chief Legal Officer',
@@ -245,7 +235,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Vice President',
@@ -254,7 +244,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'HR',
@@ -263,7 +253,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'UI Designer',
@@ -272,7 +262,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Architect',
@@ -281,7 +271,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Chief Legal Officer',
@@ -290,7 +280,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
     {
       designation: 'Vice President',
@@ -299,7 +289,7 @@ export class PositionListComponent {
       location: 'Ahmedabad',
       updatedBy: 'Pruthvi Dhamecha',
       lastUpdated: 'Sep 6, 2022, 7:05pm',
-      action: ''
+      action: '',
     },
   ];
 
@@ -313,8 +303,8 @@ export class PositionListComponent {
   public rowModelType: any = 'serverSide';
   public cacheBlockSize = 10;
   pagination = true;
-  paginationPageSize = 2;
-  paginationPageSizeSelector = [2, 10, 20, 50, 100];
+  paginationPageSize = 8;
+  paginationPageSizeSelector = [5, 10, 20, 50, 100];
 
   displayedColumns: string[] = [
     'designation',
@@ -326,10 +316,10 @@ export class PositionListComponent {
     'actions',
   ];
   searchValue = '';
-  selectedDesignation = '';
+  selectedDesignation = 'all';
   designations = [
     'HR',
-    'UI designer',
+    'UI Designer',
     'Architect',
     'Programmer Analyst',
     'Chief Legal Officer',
@@ -337,9 +327,6 @@ export class PositionListComponent {
     'Chief Marketing Officer',
     'Program Manager',
   ];
-
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
 
   // Chart labels
   public doughnutChartLabels: string[] = [
@@ -361,10 +348,10 @@ export class PositionListComponent {
     labels: this.doughnutChartLabels,
     datasets: [
       {
-        data: [30, 20, 30, 10], // Percentage values
-        backgroundColor: ['#4CAF50', '#FFC107', '#2196F3', '#9E9E9E'], // Colors for each segment
+        data: [30, 20, 30, 10],
+        backgroundColor: ['#4CAF50', '#FFC107', '#2196F3', '#9E9E9E'],
         hoverBackgroundColor: ['#4CAF50', '#FFC107', '#2196F3', '#9E9E9E'],
-        borderWidth: 0, // Removes border between segments
+        borderWidth: 0,
       },
     ],
   };
@@ -372,10 +359,10 @@ export class PositionListComponent {
   // Chart options
   public doughnutChartOptions: ChartConfiguration<'doughnut'>['options'] = {
     responsive: true,
-    cutout: '80%', // Creates the inner circular cutout for the doughnut effect
+    cutout: '80%',
     plugins: {
       legend: {
-        display: false, // Hides default legend
+        display: false,
       },
       tooltip: {
         callbacks: {
@@ -385,11 +372,10 @@ export class PositionListComponent {
     },
   };
   public isBrowser: boolean;
+  filteredData: EmployeePosition[] = this.rowData;
 
   constructor(@Inject(PLATFORM_ID) platformId: Object) {
     this.isBrowser = isPlatformBrowser(platformId);
-
-    // Register the custom plugin to add center text
     Chart.register({
       id: 'centerText',
       beforeDraw(chart) {
@@ -420,17 +406,17 @@ export class PositionListComponent {
 
   // Filter logic
   applyFilters(): void {
-    // this.filteredData = this.dataSource.filter((employee) => {
-    //   const matchesSearch =
-    //     !this.searchValue ||
-    //     employee.designation
-    //       .toLowerCase()
-    //       .includes(this.searchValue.toLowerCase());
-    //   const matchesDesignation =
-    //     !this.selectedDesignation ||
-    //     employee.designation === this.selectedDesignation;
-    //   return matchesSearch && matchesDesignation;
-    // });
+    this.filteredData = this.rowData.filter((employee) => {
+      const matchesSearch =
+        !this.searchValue ||
+        employee.designation
+          .toLowerCase()
+          .includes(this.searchValue.toLowerCase());
+      const matchesDesignation =
+        !this.selectedDesignation ||
+        employee.designation === this.selectedDesignation;
+      return matchesSearch && matchesDesignation;
+    });
   }
 
   clearFilters(): void {}
@@ -442,11 +428,11 @@ export class PositionListComponent {
 
   // Filter by designation
   filterByDesignation() {
-    // this.filteredData = this.selectedDesignation
-    //   ? this.dataSource.filter(
-    //       (item) => item.designation === this.selectedDesignation
-    //     )
-    //   : this.dataSource;
+    this.filteredData = this.selectedDesignation !== 'All'
+      ? this.rowData.filter(
+          (item) => item.designation === this.selectedDesignation
+        )
+      : this.rowData;
   }
 
   onGridReady(params: any) {

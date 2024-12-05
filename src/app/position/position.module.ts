@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../shared/material/material.module';
 import { AgGridModule } from 'ag-grid-angular';
-import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [PositionListComponent, CreatePositionComponent],
   imports: [
@@ -21,7 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     MaterialModule,
     AgGridModule,
-    HttpClientModule
   ],
   providers: [
     provideNoopAnimations()
